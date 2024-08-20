@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+font-family: "Montserrat", system-ui;
+*/
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.header{
+    background-image: url(images/MediaDemo-Background-1600x935.avif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+    padding-bottom: 50px;
+    font-size: 22px;
+}
+
+.menu .navbar ul li a {
+    font-size: 40px;
+    padding: 75px;
+    padding-bottom: 0%;
+    color: black;
+    display: block;
+    font-weight: bold;
+
+}
+
+.menu .navbar ul li a:hover {
+    color: black;
+
+
+
+}
+
+
+.icons {
+    display: flex;
+
+}
+
+.icons i {
+    font-size: 25px;
+    color: black;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+
+.icons i:hover {
+    color: black;
+
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-txt {
+    width: 40%;
+}
+.header-txt h1 {
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    margin-bottom: 25px;
+    font-family: "Montserrat", system-ui;
+}
+
+.header-txt p {
+    text-decoration: solid;
+    font-size: 22px;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: white;
+    background-color: cornflowerblue;
+    font-family: "Montserrat", system-ui;
+}
+
+.btn-1:hover {
+    background-color: gray;
+
+}
+.images{
+    width: 800px;
+    height: 380px;
+    position: absolute;
+    right: 0;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+} 
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide h3 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: black;
+    font-family: "Montserrat", system-ui;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.rows {
+    width: 180px;
+    position: absolute;
+    right: 620px;
+    bottom: 280px;
+
+}
+
+.swiper-button.prev {
+    height: 50px;
+    width: 50px;
+    border: 2px solid cornflowerblue;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.swiper-button.next {
+    height: 50px;
+    width: 50px;
+    border: 2px solid cornflowerblue;
+    border-radius: 50%;
+    font-size: 15px;
+}
+.swiper-button.prev::after {
+    font-size: 25px;
+    color: cornflowerblue;
+}
+
+.swiper-button.next::after {
+    font-size: 25px;
+    color:cornflowerblue
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+
+    }
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        backdrop-filter: blur(50px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+
+    .header-txt h1{
+        margin-bottom: 10px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+        height: 300px;
+    }
+
+    .rows {
+        display: none;
+    }
+
+}
